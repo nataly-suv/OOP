@@ -6,12 +6,10 @@ public class Main {
         Person person = new Person("Сергей", "owener");
         Person person2 = new Person("Иван", "no owener");
         Cat cat = new Cat("Васька");
-        Call call = new Call(person, cat);
-        call.call();
+        person.call(person.getStatus(), cat);
 
         System.out.print("\n");
-        Call call2 = new Call(person2, cat);
-        call2.call();
+        person.call(person2.getStatus(), cat);
 
     }
 
