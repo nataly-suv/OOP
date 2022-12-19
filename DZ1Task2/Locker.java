@@ -7,6 +7,16 @@ public class Locker {
         this.status = status;
     }
 
+    // метод открытия шкафа
+    public static Locker openLocker(Person p, Locker l) {
+        if (p.getKey() == "Yes" && l.getStatus() == "Close") {
+            l.setStatus("Open");
+            System.out.println("Ура, шкаф открыт!");
+        }
+        return l;
+
+    }
+
     public String getStatus() {
         return status;
     }
